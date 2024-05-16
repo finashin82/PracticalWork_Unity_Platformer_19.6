@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +134,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Gunner_Green_Run_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 9
+        width: 38
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91cc4af77639e534da493a45a277504e
+      internalID: -222154495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gunner_Green_Run_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 10
+        width: 39
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9df52487c0773841aa92cb4b4f807b3
+      internalID: -1119571017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gunner_Green_Run_2
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 10
+        width: 8
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4858857eaf5a6438eadbd92ec9c686
+      internalID: -2115708363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gunner_Green_Run_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 9
+        width: 28
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24074c5e221166342ab5565fc805586b
+      internalID: 1519896318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gunner_Green_Run_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 10
+        width: 40
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8383170038888ad488ab4c4421660a4c
+      internalID: -524627655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gunner_Green_Run_5
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 11
+        width: 39
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51efac7b2513bdc4caaa2e870e466e9a
+      internalID: 665392431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gunner_Green_Run_6
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 10
+        width: 8
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d7c31d2478d36499199e8713c4b14b
+      internalID: 1610008249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gunner_Green_Run_7
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 9
+        width: 28
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9d2c2c35b918d42933dd5e495db00d
+      internalID: -1288137467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +313,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gunner_Green_Run_0: -222154495
+      Gunner_Green_Run_1: -1119571017
+      Gunner_Green_Run_2: -2115708363
+      Gunner_Green_Run_3: 1519896318
+      Gunner_Green_Run_4: -524627655
+      Gunner_Green_Run_5: 665392431
+      Gunner_Green_Run_6: 1610008249
+      Gunner_Green_Run_7: -1288137467
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
