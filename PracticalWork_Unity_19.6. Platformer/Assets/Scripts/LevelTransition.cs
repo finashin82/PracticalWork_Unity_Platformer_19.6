@@ -1,0 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class LevelTransition : MonoBehaviour
+{
+    [Tooltip("Номер уровня")]
+    [SerializeField] private int _level;
+
+    /// <summary>
+    ///  Загружаем уровень
+    /// </summary>
+    public void LevelTransitionsButton()
+    {
+        // Загружаем сцену
+        SceneManager.LoadScene(_level);
+    }
+
+    /// <summary>
+    ///  Переход на следующий уровень
+    /// </summary>
+    public void NextLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    /// <summary>
+    ///  Повтор уровня
+    /// </summary>
+    public void RepeatLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    /// <summary>
+    /// Главное меню
+    /// </summary>
+    public void MainMenuLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+    }
+}
