@@ -10,6 +10,7 @@ public class Shooter : MonoBehaviour
     // Скорость стрельбы
     [SerializeField] private float fireSpeed;
 
+    // Точка, откуда идет стрельба
     [SerializeField] private Transform firePoint;
 
     /// <summary>
