@@ -5,44 +5,42 @@ using UnityEngine.UI;
 
 public class PlayerSelectionMenu : MonoBehaviour
 {
+    [Tooltip("soldier")]
     [SerializeField] private Image _soldierPlayer;
 
+    [Tooltip("mercenary")]
     [SerializeField] private Image _mercenaryPlayer;
 
-    static public bool isSoldier;
-    static public bool isMercenary;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         _soldierPlayer.color = Color.white;
-        isSoldier = true;
-
+       
         _mercenaryPlayer.color = Color.black;
-        isMercenary = false;
+       
+        PlayerPrefs.SetInt("soldierSelection", 1);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void SoldierSelection()
+   
+    /// <summary>
+    ///  нопка выбора солдата
+    /// </summary>
+    public void SoldierSelectionButton()
     {
         _soldierPlayer.color = Color.white;
-        isSoldier = true;
-
+       
         _mercenaryPlayer.color = Color.black;
-        isMercenary = false;
+      
+        PlayerPrefs.SetInt("soldierSelection", 1);
     }
 
-    public void MercenarySelection()
+    /// <summary>
+    ///  нопка выбора наемника
+    /// </summary>
+    public void MercenarySelectionButton()
     {
         _soldierPlayer.color = Color.black;
-        isSoldier = false;
-
+      
         _mercenaryPlayer.color = Color.white;
-        isMercenary = true;        
+       
+        PlayerPrefs.SetInt("soldierSelection", 0);
     }
 }

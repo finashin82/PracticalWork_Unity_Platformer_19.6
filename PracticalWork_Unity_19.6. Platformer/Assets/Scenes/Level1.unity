@@ -595,6 +595,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db18e3bbd1271a442a444804314b472d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _soldierPlayer: {fileID: 2125131809}
+  _mercenaryPlayer: {fileID: 1407179660}
 --- !u!4 &1665538233
 Transform:
   m_ObjectHideFlags: 0

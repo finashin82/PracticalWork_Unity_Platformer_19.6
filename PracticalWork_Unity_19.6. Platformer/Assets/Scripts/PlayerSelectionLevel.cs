@@ -1,29 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerSelectionLevel : MonoBehaviour
 {
-    private PlayerSelectionMenu playerSelection;
+    [Tooltip("soldier")]
+    [SerializeField] private GameObject _soldierPlayer;
 
-    private bool w;
+    [Tooltip("mercenary")]
+    [SerializeField] private GameObject _mercenaryPlayer;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        playerSelection = GetComponent<PlayerSelectionMenu>();
-        w = playerSelection.;
-        //isSoldier = playerSelection.GetComponent<PlayerSelectionMenu>.isSoldier;
-
-        if (w)
-            Debug.Log("Soldier");
+        if(PlayerPrefs.GetInt("soldierSelection") == 1 )
+        {
+            _soldierPlayer.gameObject.SetActive(true);
+            _mercenaryPlayer.gameObject.SetActive(false);
+        }
         else
-            Debug.Log("Mercwenary");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        {
+            _soldierPlayer.gameObject.SetActive(false);
+            _mercenaryPlayer.gameObject.SetActive(true);
+        }
+    }   
 }

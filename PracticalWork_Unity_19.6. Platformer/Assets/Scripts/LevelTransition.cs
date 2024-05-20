@@ -36,11 +36,19 @@ public class LevelTransition : MonoBehaviour
     }
 
     /// <summary>
-    /// Главное меню
+    /// Возврат в главное меню
     /// </summary>
     public void MainMenuLevel()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
+    }
+
+    /// <summary>
+    /// Кнопка выхода из игры
+    /// </summary>
+    public void ExitButton()
+    {
+        Application.Quit();
     }
 }
