@@ -13,9 +13,13 @@ public class DamageDealler : MonoBehaviour
         {
             // У объекта с которым столкнулись пули, вызывается скрипт "Health" и метод "TakeDamage" с параметром damage (Уменьшает здоровье)
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+
+            // Удаляем пулю
+            Destroy(gameObject);
         }
 
-        // Удаляем пулю
-        Destroy(gameObject);
+
+        //// Удаляем пулю
+        //Destroy(gameObject);
     }
 }
