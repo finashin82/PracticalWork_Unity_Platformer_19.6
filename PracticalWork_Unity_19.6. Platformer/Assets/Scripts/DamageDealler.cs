@@ -13,13 +13,15 @@ public class DamageDealler : MonoBehaviour
         {
             // У объекта с которым столкнулись пули, вызывается скрипт "Health" и метод "TakeDamage" с параметром damage (Уменьшает здоровье)
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
-
-            // Удаляем пулю
-            Destroy(gameObject);
         }
 
+        Coroutine coroutin = StartCoroutine(timer());
+    }
 
-        //// Удаляем пулю
-        //Destroy(gameObject);
+    private IEnumerator timer()
+    {
+        // Вызывает действие через 2 секунды
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);        
     }
 }
