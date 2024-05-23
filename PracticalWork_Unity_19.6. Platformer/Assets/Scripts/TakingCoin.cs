@@ -12,12 +12,12 @@ public class TakingCoin : MonoBehaviour
     [Tooltip("Поле для звука сбора монеты")]
     [SerializeField] private AudioSource _takingCoin;
 
-    private int levelMoney;
-    private int allMoney;
+    private int levelCoin;    
 
     private void Awake()
     {
-        levelMoney = 0;        
+        levelCoin = 0;
+        PlayerPrefs.SetInt("levelCoin", levelCoin);                
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,15 +28,10 @@ public class TakingCoin : MonoBehaviour
 
             _takingCoin.Play();
 
-            PlayerPrefs.SetInt("allMoney", allMoney + 1);
+            levelCoin += 1;
+            PlayerPrefs.SetInt("levelCoin", levelCoin);
 
-            levelMoney++;
-            _levelMoney.text = Convert.ToString(levelMoney);
-
-            
+            _levelMoney.text = Convert.ToString(levelCoin);            
         }
-
-        //Destroy(gameObject);
-        
     }
 }
