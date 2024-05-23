@@ -10,37 +10,55 @@ public class EndLevel : MonoBehaviour
     [Tooltip("Панель победы в уровне")]
     [SerializeField] private GameObject _winLevelPanel;
 
-    [Tooltip("Количество монет в уровне")]
-    [SerializeField] private Text _levelCoin;
+    //[Tooltip("Количество монет в уровне")]
+    //[SerializeField] private Text _levelCoin;
 
     [Tooltip("Количество монет за все уровни")]
     [SerializeField] private Text _allCoin;
+    
+    [Tooltip("Количество монет в уровне")]
+    [SerializeField] private Text _levelCoin;
 
-    private int levelCoin, allCoin;
+    private int levelCoin, allCoin;    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            levelCoin = PlayerPrefs.GetInt("levelCoin");
+            Time.timeScale = 0;
+            
+            _winLevelPanel.SetActive(true);
+
             allCoin = PlayerPrefs.GetInt("allCoin");
+            levelCoin = PlayerPrefs.GetInt("levelCoin");
 
             allCoin += levelCoin;
 
             _levelCoin.text = Convert.ToString(levelCoin);
             _allCoin.text = Convert.ToString(allCoin);
-
-            _winLevelPanel.SetActive(true);
         }
     }
 
+    /// <summary>
+    /// Запись всех монет
+    /// </summary>
     public void RecordAllCoin()
     {
+        allCoin = PlayerPrefs.GetInt("allCoin");
+        levelCoin = PlayerPrefs.GetInt("levelCoin");
+
+        allCoin += levelCoin;
+
         PlayerPrefs.SetInt("allCoin", allCoin);
+        PlayerPrefs.Save();
     }
 
+    /// <summary>
+    /// Сброс всех монет
+    /// </summary>
     public void ResetAllCoin()
     {
         PlayerPrefs.SetInt("allCoin", 0);
+        PlayerPrefs.Save();
     }
 }
