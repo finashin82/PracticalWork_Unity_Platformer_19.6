@@ -10,9 +10,6 @@ public class EndLevel : MonoBehaviour
     [Tooltip("Панель победы в уровне")]
     [SerializeField] private GameObject _winLevelPanel;
 
-    //[Tooltip("Количество монет в уровне")]
-    //[SerializeField] private Text _levelCoin;
-
     [Tooltip("Количество монет за все уровни")]
     [SerializeField] private Text _allCoin;
     
