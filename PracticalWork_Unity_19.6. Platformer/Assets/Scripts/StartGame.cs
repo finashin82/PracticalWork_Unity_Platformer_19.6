@@ -18,7 +18,7 @@ public class StartGame : MonoBehaviour
 
     public void StartGames()
     {
-        //PlayerPrefs.SetInt("allCoin", 0);
-        //PlayerPrefs.SetInt("levelCoin", 0);
+        PlayerPrefs.SetInt("allCoin", 0);
+        PlayerPrefs.SetInt("levelCoin", 0);
     }
 }

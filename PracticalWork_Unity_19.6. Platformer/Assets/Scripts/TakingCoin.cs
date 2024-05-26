@@ -9,9 +9,6 @@ public class TakingCoin : MonoBehaviour
     [Tooltip("Поле для количества монет в уровне")]
     [SerializeField] private Text _levelMoney;
     
-    //[Tooltip("Поле для количества монет на экране победы")]
-    //[SerializeField] private Text _levelWinMoney;
-
     [Tooltip("Поле для звука сбора монеты")]
     [SerializeField] private AudioSource _takingCoin;
 
@@ -24,20 +21,25 @@ public class TakingCoin : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    private void Update()
+    {
+        _levelMoney.text = Convert.ToString(levelCoin);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Coin"))
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
             
             _takingCoin.Play();
 
             levelCoin++;
-            
+
             PlayerPrefs.SetInt("levelCoin", levelCoin);
             PlayerPrefs.Save();                      
 
-            _levelMoney.text = Convert.ToString(levelCoin);            
+            _levelMoney.text = Convert.ToString(levelCoin);
         }
     }
 }
