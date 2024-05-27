@@ -6,8 +6,8 @@ public class ElevatorAutoUpDown : MonoBehaviour
 {
     private SliderJoint2D elevatorMovement;
     
-    private float elevatorSpeedDown = -2f;
-    private float elevatorSpeedUp = 2f;
+    private float elevatorSpeedDown = -1f;
+    private float elevatorSpeedUp = 1f;
     
     
     // Start is called before the first frame update
@@ -43,5 +43,17 @@ public class ElevatorAutoUpDown : MonoBehaviour
         elevatorMotor.motorSpeed = speed;
 
         elevatorMovement.motor = elevatorMotor;
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(transform, true);
+        }
+        else
+        {
+            collision.transform.SetParent(null);
+        }
     }
 }
