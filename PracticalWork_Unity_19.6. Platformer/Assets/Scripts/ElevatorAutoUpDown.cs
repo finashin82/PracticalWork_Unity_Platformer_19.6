@@ -45,15 +45,27 @@ public class ElevatorAutoUpDown : MonoBehaviour
         elevatorMovement.motor = elevatorMotor;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.transform.SetParent(transform, true);
+            collision.transform.SetParent(this.transform);
         }
         else
         {
             collision.transform.SetParent(null);
         }
     }
+
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        collision.transform.SetParent(transform);
+    //    }
+    //    else
+    //    {
+    //        collision.transform.SetParent(null);
+    //    }
+    //}
 }

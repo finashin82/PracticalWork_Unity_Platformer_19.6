@@ -32,7 +32,7 @@ public class TakingCoin : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
             
-            _takingCoin.Play();
+            //_takingCoin.Play();
 
             levelCoin++;
 
