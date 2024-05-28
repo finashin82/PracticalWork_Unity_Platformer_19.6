@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class ElevatorAutoUpDown : MonoBehaviour
 {
-    private SliderJoint2D elevatorMovement;
+    private SliderJoint2D elevatorMovement;    
     
-    private float elevatorSpeedDown = -1f;
-    private float elevatorSpeedUp = 1f;
-    
+    private float elevatorSpeed = 0.5f;    
     
     // Start is called before the first frame update
     void Start()
@@ -25,11 +23,11 @@ public class ElevatorAutoUpDown : MonoBehaviour
         // При достижении нижнего лимита или верхнего, лифт едет вверх или вниз (Лимиты задаются в инспекторе)
         if (elevatorMovement.limitState == JointLimitState2D.LowerLimit)
         {
-            MotionElevator(elevatorSpeedUp);
+            MotionElevator(elevatorSpeed);
         }
         else if (elevatorMovement.limitState == JointLimitState2D.UpperLimit)
         {
-            MotionElevator(elevatorSpeedDown);
+            MotionElevator(-elevatorSpeed);
         }      
     }   
 
@@ -50,22 +48,14 @@ public class ElevatorAutoUpDown : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.transform.SetParent(this.transform);
-        }
-        else
-        {
-            collision.transform.SetParent(null);
-        }
+        }        
     }
 
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        collision.transform.SetParent(transform);
-    //    }
-    //    else
-    //    {
-    //        collision.transform.SetParent(null);
-    //    }
-    //}
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.parent = null;
+        }        
+    }
 }

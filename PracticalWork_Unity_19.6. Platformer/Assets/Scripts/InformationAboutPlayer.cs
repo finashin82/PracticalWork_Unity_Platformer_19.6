@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InformationAboutPlayer : MonoBehaviour
 {
+    [SerializeField] private Text _levelNumber;
    
 
     //// Окно при убийстве врага
@@ -24,7 +26,7 @@ public class InformationAboutPlayer : MonoBehaviour
 
     private void Awake()
     {
-        
+        _levelNumber.text = "Уровень " + SceneManager.GetActiveScene().buildIndex.ToString();
     }
 
     // Update is called once per frame
