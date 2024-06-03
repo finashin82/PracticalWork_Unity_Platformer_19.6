@@ -4,44 +4,53 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class InformationAboutPlayer : MonoBehaviour
 {
-    [SerializeField] private Text _levelNumber;
-   
+    // Поле для вывода номера уровня
+    [SerializeField] private Text _levelNumber;   
+                
+    // Player
+    [SerializeField] private GameObject _player;
 
-    //// Окно при убийстве врага
-    //[SerializeField] private Image _textWinImage;
+    // Поле для "Панель паузы"
+    [SerializeField] private GameObject _pausePanel;
 
-    //// Окно при проигрыше Player
-    //[SerializeField] private Image _textLostPlayerImage;
+    // Поле для "Панель GameOver"
+    [SerializeField] private GameObject _gameOverPanel;
 
-    //// Враг
-    //[SerializeField] private GameObject _enemy;
-
-    //// Player
-    //[SerializeField] private GameObject _player;
-
-    private bool isAlive;
+    private bool isAction;
 
     private void Awake()
     {
+        isAction = true;
+
         _levelNumber.text = "Уровень " + SceneManager.GetActiveScene().buildIndex.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (_enemy.activeSelf == false)
-        //{
-        //    _textWinImage.gameObject.SetActive(true);
-        //}
+        if (_player.gameObject.activeSelf == false)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //_player.gameObject.SetActive(false);
+        }
 
-        //if (_player.activeSelf == false)
-        //{
-        //    _textLostPlayerImage.gameObject.SetActive(true);
-        //}
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isAction) 
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
+            _pausePanel.gameObject.SetActive(isAction);
+            isAction = !isAction;
+        }
 
-        
     }
 }

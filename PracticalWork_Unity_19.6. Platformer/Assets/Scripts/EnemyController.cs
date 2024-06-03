@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private float speed, timeToRevert;
+    [SerializeField] private Image _HPEnemyImage;
 
+    [SerializeField] private float speed, timeToRevert;
     
     [SerializeField] private Animator anim;
     [SerializeField] private SpriteRenderer spriteRend;
@@ -29,6 +32,8 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _HPEnemyImage.transform.position = new Vector2(spriteRend.transform.position.x, _HPEnemyImage.transform.position.y);
+
         if (currentTimeToRevert >= timeToRevert)
         {
             currentTimeToRevert = 0;

@@ -14,8 +14,8 @@ public class Health : MonoBehaviour
     // Текущая жизнь
     private float currentHealth;
 
-    // Жив игрок или нет
-    private bool isAlive;
+    //// Жив игрок или нет
+    //private bool isAlive;
 
     private Animator animatorGamer;
 
@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
     {
         animatorGamer = GetComponent<Animator>();
         currentHealth = maxHealth;
-        isAlive = true;
+        //isAlive = true;
     }
 
     /// <summary>
@@ -44,16 +44,12 @@ public class Health : MonoBehaviour
     /// </summary>
     private void CheckIsAlive()
     {
-        if (currentHealth > 0)
-        {
-            isAlive = true;            
-        }
-        else
+        if (currentHealth <= 0)
         {
             animatorGamer.SetBool("isDeath", true);
-
+            
             Coroutine coroutin = StartCoroutine(timer());
-        }
+        }        
     }
 
     /// <summary>
