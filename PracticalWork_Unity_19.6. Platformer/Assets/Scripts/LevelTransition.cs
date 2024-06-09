@@ -13,6 +13,7 @@ public class LevelTransition : MonoBehaviour
     /// </summary>
     public void LevelTransitionsButton()
     {
+        Time.timeScale = 1;
         // Загружаем сцену
         SceneManager.LoadScene(_level);
     }

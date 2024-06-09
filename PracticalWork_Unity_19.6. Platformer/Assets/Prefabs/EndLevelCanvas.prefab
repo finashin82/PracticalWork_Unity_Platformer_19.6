@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5269123599461152611}
   - component: {fileID: 4145531945256062597}
   - component: {fileID: 3337653776614746539}
+  - component: {fileID: 2262374509566361468}
   m_Layer: 5
   m_Name: RepeatLevel
   m_TagString: Untagged
@@ -121,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2262374509566361468}
         m_TargetAssemblyTypeName: LevelTransition, Assembly-CSharp
         m_MethodName: RepeatLevel
         m_Mode: 1
@@ -133,6 +134,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2262374509566361468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379843441361934861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17538e9b178e045a5db35ff02e9bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
 --- !u!1 &688702451191805139
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +238,7 @@ GameObject:
   - component: {fileID: 8480317863505808599}
   - component: {fileID: 3443738925734095946}
   - component: {fileID: 6049774550570806331}
+  - component: {fileID: 7623463062045363700}
   m_Layer: 5
   m_Name: RepeatLevel
   m_TagString: Untagged
@@ -333,7 +348,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7623463062045363700}
         m_TargetAssemblyTypeName: LevelTransition, Assembly-CSharp
         m_MethodName: RepeatLevel
         m_Mode: 1
@@ -345,6 +360,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7623463062045363700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784336634346892877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17538e9b178e045a5db35ff02e9bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
 --- !u!1 &966240610832678736
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +385,7 @@ GameObject:
   - component: {fileID: 6942157181314583049}
   - component: {fileID: 8075500328524301053}
   - component: {fileID: 740976180934448171}
+  - component: {fileID: 3868550262078505043}
   m_Layer: 5
   m_Name: NextLevel
   m_TagString: Untagged
@@ -466,7 +495,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3868550262078505043}
         m_TargetAssemblyTypeName: LevelTransition, Assembly-CSharp
         m_MethodName: NextLevel
         m_Mode: 1
@@ -478,18 +507,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: EndLevel, Assembly-CSharp
-        m_MethodName: RecordAllCoin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &3868550262078505043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966240610832678736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17538e9b178e045a5db35ff02e9bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
 --- !u!1 &1040142494684789771
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +532,7 @@ GameObject:
   - component: {fileID: 7809161498748307302}
   - component: {fileID: 6500796654794348360}
   - component: {fileID: 8603805136127624530}
+  - component: {fileID: 2861341606149515876}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -611,19 +642,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: EndLevel, Assembly-CSharp
-        m_MethodName: ResetAllCoin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2861341606149515876}
         m_TargetAssemblyTypeName: LevelTransition, Assembly-CSharp
         m_MethodName: MainMenuLevel
         m_Mode: 1
@@ -635,6 +654,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2861341606149515876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040142494684789771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17538e9b178e045a5db35ff02e9bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
 --- !u!1 &1107189499707489143
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +912,7 @@ GameObject:
   - component: {fileID: 5331685453634418595}
   - component: {fileID: 424086096437028626}
   - component: {fileID: 7640767555658777942}
+  - component: {fileID: 448539940690918619}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -989,19 +1022,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: EndLevel, Assembly-CSharp
-        m_MethodName: ResetAllCoin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 448539940690918619}
         m_TargetAssemblyTypeName: LevelTransition, Assembly-CSharp
         m_MethodName: MainMenuLevel
         m_Mode: 1
@@ -1013,6 +1034,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &448539940690918619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3627760940842785740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17538e9b178e045a5db35ff02e9bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
 --- !u!1 &3629777718382109563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,6 +1059,7 @@ GameObject:
   - component: {fileID: 5550108223017697317}
   - component: {fileID: 3258770293336020012}
   - component: {fileID: 618337505640701808}
+  - component: {fileID: 1920508011604285102}
   m_Layer: 5
   m_Name: RepeatLevel
   m_TagString: Untagged
@@ -1134,7 +1169,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1920508011604285102}
         m_TargetAssemblyTypeName: LevelTransition, Assembly-CSharp
         m_MethodName: RepeatLevel
         m_Mode: 1
@@ -1146,6 +1181,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1920508011604285102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3629777718382109563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17538e9b178e045a5db35ff02e9bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
 --- !u!1 &3735080911262018170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,6 +1759,7 @@ GameObject:
   - component: {fileID: 7513268486390517910}
   - component: {fileID: 231701088943990921}
   - component: {fileID: 7454340908715862743}
+  - component: {fileID: 5148526475501629292}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1820,19 +1869,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: EndLevel, Assembly-CSharp
-        m_MethodName: ResetAllCoin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5148526475501629292}
         m_TargetAssemblyTypeName: LevelTransition, Assembly-CSharp
         m_MethodName: MainMenuLevel
         m_Mode: 1
@@ -1844,6 +1881,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5148526475501629292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805677604664706147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17538e9b178e045a5db35ff02e9bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
 --- !u!1 &6961302993409847779
 GameObject:
   m_ObjectHideFlags: 0

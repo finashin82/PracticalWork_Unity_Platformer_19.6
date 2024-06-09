@@ -34,7 +34,10 @@ public class InformationAboutPlayer : MonoBehaviour
     {
         if (_player.gameObject.activeSelf == false)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //Time.timeScale = 0;
+            _gameOverPanel.SetActive(true);
+            
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             //_player.gameObject.SetActive(false);
         }
 

@@ -58,4 +58,13 @@ public class EndLevel : MonoBehaviour
         PlayerPrefs.SetInt("allCoin", 0);
         PlayerPrefs.Save();
     }
+
+    ///// <summary>
+    ///// —брос монет набранных в уровне
+    ///// </summary>
+    //public void ResetLevelCoin()
+    //{
+    //    PlayerPrefs.SetInt("levelCoin", 0);
+    //    PlayerPrefs.Save();
+    //}
 }
