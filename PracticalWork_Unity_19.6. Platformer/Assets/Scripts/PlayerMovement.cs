@@ -72,9 +72,9 @@ public class PlayerMovement : MonoBehaviour
         // float до нуля не падает, поэтому нельзя ставить != 0, и берём модуль числа
         if (Mathf.Abs(direction) > 0.01f)
         {
-            HorizontalMovement(direction);            
+            HorizontalMovement(direction);
         }
-        
+
         // Условия для запуска анимации бега
         if (Mathf.Abs(direction) > 0.01f && isGrounded)
         {
@@ -106,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
     private void HorizontalMovement( float direction)
     {
         // direction изменяется по кривой
-        rb.velocity = new Vector2(curve.Evaluate(direction) * speed, rb.velocity.y);        
+        rb.velocity = new Vector2(curve.Evaluate(direction) * speed, rb.velocity.y);
     }
 
     /// <summary>
@@ -119,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
         {
             flipSprite.flipX = false;
         }
-        else
+        else //if (direction < 0)
         {
             flipSprite.flipX = true;
         }

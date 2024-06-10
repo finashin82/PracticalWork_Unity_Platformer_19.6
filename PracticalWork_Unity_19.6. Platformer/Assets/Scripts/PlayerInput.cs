@@ -22,7 +22,7 @@ public class PlayerInput : MonoBehaviour
         // Ќаправление по горизонтальной оси (Input.GetAxisRaw - направление: возвращает точные значени€ -1, 0, 1)
         // Ќаправление по горизонтальной оси (Input.GetAxis - направление: возвращает промежуточные значени€ от -1 до 1)        
         float horizontalDirection = Input.GetAxis(GlobalStringVars._horizontalAxis);
-
+        
         // ѕровер€ем нажата или нет клавиша прыжка
         bool isJumpButtonPressed = Input.GetButtonDown(GlobalStringVars._jumpButton);
 
