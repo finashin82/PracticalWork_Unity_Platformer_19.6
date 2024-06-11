@@ -47,6 +47,16 @@ public class MineExplosion : MonoBehaviour
 
             // Отзываем разрешение и больше этот код выполняться не будет
             isPermission = false;
+
+            Coroutine coroutin = StartCoroutine(timer());
         }        
+    }
+
+    private IEnumerator timer()
+    {
+        // Вызывает действие через 0.5 секунды
+        yield return new WaitForSeconds(0.3f);
+
+        _explosion.gameObject.SetActive(false);
     }
 }

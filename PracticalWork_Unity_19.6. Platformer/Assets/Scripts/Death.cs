@@ -18,9 +18,7 @@ public class Death : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            _player.gameObject.SetActive(false);
-            //collision.gameObject.SetActive(false);
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            _player.gameObject.SetActive(false);            
         }
     }
 }
