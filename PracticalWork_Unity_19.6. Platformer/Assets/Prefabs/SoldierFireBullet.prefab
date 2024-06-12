@@ -99,7 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc14e4f49c391984387e3b4824cd0d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
   damage: 10
+  enemyLayer: 8
 --- !u!61 &1695261371501322583
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -7,21 +7,28 @@ public class DamageDealler : MonoBehaviour
     // Урон от пули
     [SerializeField] private float damage;
 
+    // Время, через которое уничтожается пуля
+    private int timeToDestroy = 1;
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Damageable"))
+        // Если у объекта есть скрипт с жизнью, то можем нанести ему урон
+        if (collision.gameObject.GetComponent<Health>())
         {
             // У объекта с которым столкнулись пули, вызывается скрипт "Health" и метод "TakeDamage" с параметром damage (Уменьшает здоровье)
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
-        }
+        }               
 
         Coroutine coroutin = StartCoroutine(timer());
     }
 
+    /// <summary>
+    /// Вызываем уничтожение пули через определенное время
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator timer()
-    {
-        // Вызывает действие через 2 секунды
-        yield return new WaitForSeconds(1);
+    {        
+        yield return new WaitForSeconds(timeToDestroy);
         Destroy(gameObject);        
     }
 }
