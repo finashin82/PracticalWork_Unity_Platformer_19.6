@@ -15,16 +15,19 @@ public class EnemyController : MonoBehaviour
 
     private Rigidbody2D ridbody;
 
-    private const float _idleState = 0;
-    private const float _walkState = 1;
-    private const float _revetrState = 2;
+    private enum spriteState
+    {
+        _idleState = 0,
+        _walkState = 1,
+        _revetrState = 2,
+    }
 
     private float _currentState, currentTimeToRevert;
 
     // Start is called before the first frame update
     void Start()
     {
-        _currentState = _walkState;
+        _currentState = (float)spriteState._walkState;
         currentTimeToRevert = 0;
         ridbody = GetComponent<Rigidbody2D>();
     }
@@ -37,21 +40,21 @@ public class EnemyController : MonoBehaviour
         if (currentTimeToRevert >= timeToRevert)
         {
             currentTimeToRevert = 0;
-            _currentState = _revetrState;
+            _currentState = (float)spriteState._revetrState;
         }
 
         switch(_currentState)
         {
-            case _idleState:
+            case (float)spriteState._idleState:
                 currentTimeToRevert += Time.deltaTime;
                 break;
-            case _walkState:
+            case (float)spriteState._walkState:
                 ridbody.velocity = Vector2.left * speed;
                 break;
-            case _revetrState:
+            case (float)spriteState._revetrState:
                 spriteRend.flipX = !spriteRend.flipX;
                 speed *= -1;
-                _currentState = _walkState;
+                _currentState = (float)spriteState._walkState;
                 break;
         }
         anim.SetFloat("Velocity", ridbody.velocity.magnitude);
@@ -61,7 +64,7 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.CompareTag("EnemyStopper"))
         {
-            _currentState = _idleState;
+            _currentState = (float)spriteState._idleState;
         }
     }
 }

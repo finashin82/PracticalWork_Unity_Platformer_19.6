@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1695261371501322583}
   - component: {fileID: -5678746272452680959}
   - component: {fileID: 8740479095508815399}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SoldierFireBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -25,11 +25,18 @@ public class Shooter : MonoBehaviour
 
         if(direction >= 0)
         {
-            currentBulletVelocity.velocity = new Vector2(fireSpeed * 1, currentBulletVelocity.velocity.y);
+            CurrentBulletVelocity(1);
         }
         else
         {
-            currentBulletVelocity.velocity = new Vector2(fireSpeed * -1, currentBulletVelocity.velocity.y);
+            CurrentBulletVelocity(-1);
+        }
+
+       void CurrentBulletVelocity(int leftOrRigth)
+        {
+            currentBulletVelocity.velocity = new Vector2(fireSpeed * leftOrRigth, currentBulletVelocity.velocity.y);
         }
     }
+
+   
 }

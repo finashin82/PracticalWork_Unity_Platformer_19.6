@@ -5,25 +5,17 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    // Картинка для заливки HP
-    [SerializeField] private Image _imgHP;    
-
     // Максимальная жизнь
     [SerializeField] private float maxHealth;
 
     // Текущая жизнь
     private float currentHealth;
 
-    //// Жив игрок или нет
-    //private bool isAlive;
-
-    private Animator animatorGamer;
+    private float currentFill;
 
     private void Awake()
-    {
-        animatorGamer = GetComponent<Animator>();
-        currentHealth = maxHealth;
-        //isAlive = true;
+    {        
+        currentHealth = maxHealth;        
     }
 
     /// <summary>
@@ -33,38 +25,15 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage) 
     {
         currentHealth -= damage;
-
-        FillHealthImage();
-
-        CheckIsAlive();
     }
 
     /// <summary>
-    /// Жив ли игрок
+    /// Текущая жизнь
     /// </summary>
-    private void CheckIsAlive()
+    public float FillHealthImage()
     {
-        if (currentHealth <= 0)
-        {
-            animatorGamer.SetBool("isDeath", true);
-            
-            Coroutine coroutin = StartCoroutine(timer());
-        }        
-    }
+        currentFill = currentHealth / maxHealth;
 
-    /// <summary>
-    /// Заливка картинки жизнь
-    /// </summary>
-    private void FillHealthImage()
-    {
-        _imgHP.fillAmount = currentHealth / maxHealth;
-    }
-
-    private IEnumerator timer()
-    {
-        // Вызывает действие через 2 секунды
-        yield return new WaitForSeconds(0.5f);
-
-        gameObject.SetActive(false);
+        return currentFill;       
     }
 }

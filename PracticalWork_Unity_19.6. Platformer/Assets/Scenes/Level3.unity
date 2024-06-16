@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 17408771}
   - component: {fileID: 17408774}
   - component: {fileID: 17408773}
-  - component: {fileID: 17408772}
+  - component: {fileID: 17408775}
   m_Layer: 7
   m_Name: ThornsDeath (1)
   m_TagString: ThornsDeath
@@ -162,19 +162,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1245119401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &17408772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17408770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0fd8094b372cf043ba42f4ffa47ba82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
 --- !u!61 &17408773
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -272,6 +259,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &17408775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17408770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca319c98367c3c246beed9dab4e9e18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &31369944
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 150817160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1099,7 +1099,7 @@ GameObject:
   - component: {fileID: 549851803}
   - component: {fileID: 549851806}
   - component: {fileID: 549851805}
-  - component: {fileID: 549851804}
+  - component: {fileID: 549851807}
   m_Layer: 7
   m_Name: ThornsDeath (2)
   m_TagString: ThornsDeath
@@ -1122,19 +1122,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1245119401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &549851804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549851802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0fd8094b372cf043ba42f4ffa47ba82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
 --- !u!61 &549851805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1232,6 +1219,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &549851807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549851802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca319c98367c3c246beed9dab4e9e18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &557875660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,7 +1241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 557875661}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1257,7 +1257,7 @@ Transform:
   m_GameObject: {fileID: 557875660}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.172, z: 0}
+  m_LocalPosition: {x: 0.192, y: 0.172, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1484,7 +1484,7 @@ GameObject:
   - component: {fileID: 610943929}
   - component: {fileID: 610943932}
   - component: {fileID: 610943931}
-  - component: {fileID: 610943930}
+  - component: {fileID: 610943933}
   m_Layer: 7
   m_Name: ThornsDeath (3)
   m_TagString: ThornsDeath
@@ -1507,19 +1507,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1245119401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &610943930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610943928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0fd8094b372cf043ba42f4ffa47ba82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
 --- !u!61 &610943931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1617,6 +1604,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &610943933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610943928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca319c98367c3c246beed9dab4e9e18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &622112998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,7 +1627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622112999}
   - component: {fileID: 622113000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1721,7 +1721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 872207086}
   - component: {fileID: 872207087}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ColliderBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1956,6 +1956,17 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1153778028 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6821816457058854682, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+  m_PrefabInstance: {fileID: 4515835090614838211}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1189886718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2349,7 +2360,7 @@ GameObject:
   - component: {fileID: 1491388731}
   - component: {fileID: 1491388734}
   - component: {fileID: 1491388733}
-  - component: {fileID: 1491388732}
+  - component: {fileID: 1491388735}
   m_Layer: 7
   m_Name: ThornsDeath (4)
   m_TagString: ThornsDeath
@@ -2372,19 +2383,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1245119401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1491388732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491388730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0fd8094b372cf043ba42f4ffa47ba82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
 --- !u!61 &1491388733
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2482,6 +2480,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1491388735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491388730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca319c98367c3c246beed9dab4e9e18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &1507009926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,7 +2670,7 @@ GameObject:
   - component: {fileID: 1619175912}
   - component: {fileID: 1619175913}
   - component: {fileID: 1619175914}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HealthTrigger
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2960,10 +2971,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1634437511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0fd8094b372cf043ba42f4ffa47ba82, type: 3}
+  m_Script: {fileID: 11500000, guid: ca319c98367c3c246beed9dab4e9e18b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
 --- !u!1001 &1648877941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4748,7 +4759,9 @@ GameObject:
   - component: {fileID: 2125131815}
   - component: {fileID: 2125131818}
   - component: {fileID: 2125131817}
-  m_Layer: 0
+  - component: {fileID: 2125131819}
+  - component: {fileID: 2125131820}
+  m_Layer: 6
   m_Name: SoldierPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -4985,7 +4998,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03524196, y: 0.16}
+  m_Offset: {x: -0.044300914, y: 0.16}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -4996,7 +5009,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23770928, y: 0.32}
+  m_Size: {x: 0.21959138, y: 0.32}
   m_EdgeRadius: 0
 --- !u!114 &2125131818
 MonoBehaviour:
@@ -5010,8 +5023,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8765c3d42a484e545ae9bd9decfd8ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _imgHP: {fileID: 799764259}
   maxHealth: 100
+--- !u!114 &2125131819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125131809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d18229333b3dcd4c9dd81554af51f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _imageHP: {fileID: 799764259}
+  _player: {fileID: 2125131809}
+--- !u!114 &2125131820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125131809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c48d5be410e7e4ea52c15a04a7c1af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 2125131809}
 --- !u!4 &2132999592 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1601137691134779880, guid: ec254a54de9433046968e20634a48ecf, type: 3}
@@ -5022,6 +5061,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5181172362179075368, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
   m_PrefabInstance: {fileID: 4515835090614838211}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2674095917250491412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2674095917250491406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d18229333b3dcd4c9dd81554af51f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _imageHP: {fileID: 1153778028}
+  _player: {fileID: 2674095917250491406}
+--- !u!114 &2674095917250491413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2674095917250491406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c48d5be410e7e4ea52c15a04a7c1af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 2674095917250491406}
 --- !u!1001 &4515835090614838211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5106,6 +5172,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2975951719758484223, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1527597452}
+    - targetCorrespondingSourceObject: {fileID: 5181172362179075368, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2674095917250491412}
+    - targetCorrespondingSourceObject: {fileID: 5181172362179075368, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2674095917250491413}
   m_SourcePrefab: {fileID: 100100000, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
 --- !u!1001 &5079821515026596371
 PrefabInstance:

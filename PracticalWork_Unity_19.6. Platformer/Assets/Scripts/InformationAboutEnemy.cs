@@ -14,8 +14,6 @@ public class InformationAboutEnemy : MonoBehaviour
         {
             //Отключаем родителя объекта
             _enemy.transform.parent.gameObject.SetActive(false);
-
-            //_enemy.SetActive(false);
         }
     }
 }

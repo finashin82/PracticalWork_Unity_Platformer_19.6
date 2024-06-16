@@ -14,7 +14,6 @@ public class MineExplosion : MonoBehaviour
     [Tooltip("Для системы частиц со взрывом.")]
     [SerializeField] private ParticleSystem _explosionPS;
 
-
     [SerializeField] private AudioSource _explosionClip;
 
     private bool isExplosion = false;
@@ -31,7 +30,15 @@ public class MineExplosion : MonoBehaviour
 
         if (_mine.activeSelf == false)
             isExplosion = true;
-        
+
+        Explosion();
+    }
+
+    /// <summary>
+    /// Всё, что создает взрыв мины
+    /// </summary>
+    private void Explosion()
+    {
         // Если мина исчезла, то выполняем все нужные действия (две переменные нужны чтобы всё выполнилось по одному разу)
         // Т.к. мина, после исчезновения не видна, то взрыв и звук выполнялись бы постоянно
         if (isExplosion && isPermission)
@@ -49,9 +56,13 @@ public class MineExplosion : MonoBehaviour
             isPermission = false;
 
             Coroutine coroutin = StartCoroutine(timer());
-        }        
+        }
     }
 
+    /// <summary>
+    /// Скрываем префаб взрыва
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator timer()
     {
         // Вызывает действие через 0.5 секунды

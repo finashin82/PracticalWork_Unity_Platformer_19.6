@@ -32,15 +32,13 @@ public class InformationAboutPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Панель Game Over, если игрок умер
         if (_player.gameObject.activeSelf == false)
         {
-            //Time.timeScale = 0;
-            _gameOverPanel.SetActive(true);
-            
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            //_player.gameObject.SetActive(false);
+            _gameOverPanel.SetActive(true);            
         }
 
+        // Панель паузы открывается и закрывается при нажатии на клавишу
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isAction) 
@@ -54,6 +52,5 @@ public class InformationAboutPlayer : MonoBehaviour
             _pausePanel.gameObject.SetActive(isAction);
             isAction = !isAction;
         }
-
     }
 }
