@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class DeathInGame : MonoBehaviour
 {
-    [SerializeField] private GameObject _player;
+    [SerializeField] private Health _player;
 
     private Animator animatorGamer;
-
-    private float currentFill;
 
     private void Awake()
     {
@@ -16,11 +14,9 @@ public class DeathInGame : MonoBehaviour
     }
 
     private void Update()
-    {
-        currentFill = _player.GetComponent<Health>().FillHealthImage();
-
+    {        
         // Если текущая жизнь меньше или равна 0, то запуск анимации и скрытие объекта
-        if (currentFill <= 0)
+        if (!_player.IsAlive)
         {
             animatorGamer.SetBool("isDeath", true);
 

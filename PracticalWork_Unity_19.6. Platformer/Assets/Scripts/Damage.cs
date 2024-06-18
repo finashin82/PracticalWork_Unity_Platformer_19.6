@@ -10,10 +10,10 @@ public class Damage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Если у объекта есть скрипт с жизнью, то можем нанести ему урон
-        if (collision.gameObject.GetComponent<Health>())
+        if (collision.gameObject.TryGetComponent<Health>(out var health))
         {
             // У объекта с которым столкнулись пули, вызывается скрипт "Health" и метод "TakeDamage" с параметром damage (Уменьшает здоровье)
-            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+            health.TakeDamage(damage);
         }
     }
 }

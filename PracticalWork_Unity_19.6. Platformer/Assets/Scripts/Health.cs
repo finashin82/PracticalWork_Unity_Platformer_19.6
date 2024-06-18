@@ -11,7 +11,11 @@ public class Health : MonoBehaviour
     // Текущая жизнь
     private float currentHealth;
 
-    private float currentFill;
+    //private float currentFill;
+
+    public float MaxHealth => maxHealth;
+    public float CurrentHealth => currentHealth;
+    public bool IsAlive => currentHealth > 0;
 
     private void Awake()
     {        
@@ -25,15 +29,5 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage) 
     {
         currentHealth -= damage;
-    }
-
-    /// <summary>
-    /// Текущая жизнь
-    /// </summary>
-    public float FillHealthImage()
-    {
-        currentFill = currentHealth / maxHealth;
-
-        return currentFill;       
     }
 }

@@ -9,13 +9,13 @@ public class FillHealthImage : MonoBehaviour
     [SerializeField] private Image _imageHP;
 
     // Объект, для которого показывается жизнь
-    [SerializeField] private GameObject _player;
+    [SerializeField] private Health _player;
 
     private float currentFill;
 
     void Update()
     {
-        currentFill = _player.GetComponent<Health>().FillHealthImage();
+        currentFill = _player.CurrentHealth / _player.MaxHealth;
 
         _imageHP.fillAmount = currentFill;
     }
