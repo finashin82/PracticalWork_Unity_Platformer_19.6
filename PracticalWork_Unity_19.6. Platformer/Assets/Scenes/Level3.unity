@@ -2659,6 +2659,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
+--- !u!114 &1527597454 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8413130020863096601, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+  m_PrefabInstance: {fileID: 4515835090614838211}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527597445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784e9481ed8b75f48912f237ad7a4546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1619175911
 GameObject:
   m_ObjectHideFlags: 0
@@ -5024,6 +5035,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  healthEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2125131819}
+        m_TargetAssemblyTypeName: FillHealthImage, Assembly-CSharp
+        m_MethodName: FillImage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2125131820}
+        m_TargetAssemblyTypeName: DeathInGame, Assembly-CSharp
+        m_MethodName: DeathPlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2125131819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5037,7 +5075,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _imageHP: {fileID: 799764259}
-  _player: {fileID: 2125131818}
 --- !u!114 &2125131820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5050,7 +5087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c48d5be410e7e4ea52c15a04a7c1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 2125131818}
 --- !u!4 &2132999592 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1601137691134779880, guid: ec254a54de9433046968e20634a48ecf, type: 3}
@@ -5074,7 +5110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _imageHP: {fileID: 1153778028}
-  _player: {fileID: 2674095917250491416}
 --- !u!114 &2674095917250491413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5085,18 +5120,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26c48d5be410e7e4ea52c15a04a7c1af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 2674095917250491416}
---- !u!114 &2674095917250491416 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
-  m_PrefabInstance: {fileID: 4515835090614838211}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2674095917250491406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8765c3d42a484e545ae9bd9decfd8ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &4515835090614838211
@@ -5170,6 +5193,78 @@ PrefabInstance:
     - target: {fileID: 5181172362179075368, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2674095917250491412}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2674095917250491413}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1527597454}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FillImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DeathPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: PermissionIsAlive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FillHealthImage, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DeathInGame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: EnemyController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8933221707643157785, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
       propertyPath: m_Layer

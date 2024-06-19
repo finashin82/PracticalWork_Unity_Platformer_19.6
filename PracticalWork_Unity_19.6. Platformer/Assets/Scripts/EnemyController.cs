@@ -25,6 +25,12 @@ public class EnemyController : MonoBehaviour
     private spriteState _currentState;
     private float currentTimeToRevert;
 
+    bool isPermissionAlive;
+
+    private void Awake()
+    {
+        isPermissionAlive = true;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +50,12 @@ public class EnemyController : MonoBehaviour
             _currentState = spriteState._revetrState;
         }
 
+        // ≈сли враг убит, скорость = 0, чтобы не двигалс€ после смерти
+        if (!isPermissionAlive)
+        {
+            speed = 0;
+        }
+
         switch(_currentState)
         {
             case spriteState._idleState:
@@ -59,6 +71,15 @@ public class EnemyController : MonoBehaviour
                 break;
         }
         anim.SetFloat("Velocity", ridbody.velocity.magnitude);
+    }
+
+    /// <summary>
+    /// «апрет движени€ после смерти
+    /// </summary>
+    /// <param name="health"></param>
+    public void PermissionIsAlive(Health health)
+    {
+        isPermissionAlive = health.IsAlive; 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -2211,6 +2211,70 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2011894786}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2011894787}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1062975852}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FillImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DeathPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: PermissionIsAlive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FillHealthImage, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DeathInGame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: EnemyController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+      propertyPath: healthEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8413130020863096601, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
       propertyPath: speed
       value: 3
@@ -2263,15 +2327,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
---- !u!114 &1062975850 stripped
+--- !u!114 &1062975852 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8117097726550034972, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8413130020863096601, guid: 2d348f3469864e54c9382eedfc60de2e, type: 3}
   m_PrefabInstance: {fileID: 1062975846}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011894785}
+  m_GameObject: {fileID: 1062975848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8765c3d42a484e545ae9bd9decfd8ca0, type: 3}
+  m_Script: {fileID: 11500000, guid: 784e9481ed8b75f48912f237ad7a4546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1078545601
@@ -4493,7 +4557,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _imageHP: {fileID: 1062975847}
-  _player: {fileID: 1062975850}
 --- !u!114 &2011894787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4506,7 +4569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c48d5be410e7e4ea52c15a04a7c1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1062975850}
 --- !u!1001 &2103033811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4801,6 +4863,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  healthEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2125131818}
+        m_TargetAssemblyTypeName: FillHealthImage, Assembly-CSharp
+        m_MethodName: FillImage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2125131819}
+        m_TargetAssemblyTypeName: DeathInGame, Assembly-CSharp
+        m_MethodName: DeathPlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2125131818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4814,7 +4903,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _imageHP: {fileID: 799764259}
-  _player: {fileID: 2125131817}
 --- !u!114 &2125131819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4827,7 +4915,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c48d5be410e7e4ea52c15a04a7c1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 2125131817}
 --- !u!61 &2125131820
 BoxCollider2D:
   m_ObjectHideFlags: 0

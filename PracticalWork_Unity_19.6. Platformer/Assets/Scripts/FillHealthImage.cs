@@ -2,21 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class FillHealthImage : MonoBehaviour
 {
     // Картинка для показа жизни
     [SerializeField] private Image _imageHP;
 
-    // Объект, для которого показывается жизнь
-    [SerializeField] private Health _player;
-
-    private float currentFill;
-
-    void Update()
-    {
-        currentFill = _player.CurrentHealth / _player.MaxHealth;
-
-        _imageHP.fillAmount = currentFill;
+    /// <summary>
+    /// Заливка картинки с жизнью
+    /// </summary>
+    /// <param name="health"></param>
+    public void FillImage(Health health)
+    {        
+        _imageHP.fillAmount = health.CurrentHealth / health.MaxHealth;
     }
 }

@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
@@ -11,14 +13,14 @@ public class Health : MonoBehaviour
     // Текущая жизнь
     private float currentHealth;
 
-    //private float currentFill;
-
+    [SerializeField] private UnityEvent<Health> healthEvent;
+       
     public float MaxHealth => maxHealth;
     public float CurrentHealth => currentHealth;
     public bool IsAlive => currentHealth > 0;
 
     private void Awake()
-    {        
+    {
         currentHealth = maxHealth;        
     }
 
@@ -29,5 +31,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage) 
     {
         currentHealth -= damage;
+
+        healthEvent?.Invoke(this);        
     }
 }
